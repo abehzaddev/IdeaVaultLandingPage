@@ -39,3 +39,22 @@ document.getElementById('beta-form').addEventListener('submit', async (e) => {
         document.querySelector('.error-message').style.display = 'block';
     }
 });
+
+// Carousel functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const mockups = document.querySelectorAll('.phone-mockup');
+    let currentIndex = 0;
+
+    function updateSlide() {
+        mockups.forEach(mockup => mockup.classList.remove('active'));
+        mockups[currentIndex].classList.add('active');
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % mockups.length;
+        updateSlide();
+    }
+
+    // Auto advance slides every 5 seconds (5000 milliseconds)
+    setInterval(nextSlide, 5000);
+});
