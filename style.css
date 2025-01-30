@@ -159,12 +159,36 @@ body {
     line-height: 1.4;
 }
 
-.support {
+.footer-content {
     margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.support {
+    margin-top: 0;  /* Remove existing margin since it's now handled by footer-content */
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
     color: #666;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.social-icons a:hover {
+    color: #FF7B00;
+}
+
+@media (max-width: 1000px) {
+    .footer-content {
+        justify-content: center;
+    }
 }
 
 .message {
