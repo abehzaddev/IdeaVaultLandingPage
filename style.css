@@ -263,16 +263,30 @@ body {
         order: 2;
     }
 
-    .phone-mockup {
-        height: 40vh;
-    }
-
     .beta-signup {
         order: 3;
     }
 
-    .support {
+    .footer-content {
+        width: 100%;
+        margin-top: 3rem;
         order: 4;
+        position: relative;
+        bottom: 0;
+    }
+
+    .phone-mockup {
+        height: 40vh;
+        order: 1;
+    }
+}
+
+    .support {
+        order: 3;  /* Changed from 4 to 3 */
+    }
+    
+    .social-icons {
+        order: 4;  /* Changed from 5 to 4 */
     }
 
     .newsletter-checkbox {
