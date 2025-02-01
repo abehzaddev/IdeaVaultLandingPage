@@ -62,18 +62,18 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     margin-bottom: 2rem;
 }
 
 .logo img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 8px;
 }
 
 .logo-text {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 600;
     color: #333;
 }
@@ -87,7 +87,7 @@ body {
 }
 
 .heading {
-    font-size: 4.5rem;
+    font-size: 6.0rem;
     line-height: 1.1;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -110,10 +110,10 @@ body {
 
 .beta-signup input[type="email"] {
     flex: 1;
-    padding: 0.8rem 1rem;
+    padding: 1rem 1.2rem;
     border: 2px solid #E5E5E5;
-    border-radius: 8px;
-    font-size: 1rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
     outline: none;
     transition: border-color 0.2s;
 }
@@ -254,6 +254,13 @@ body {
     .heading {
         font-size: 3rem;
     }
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+    .logo-text{
+        font-size: 1.5rem;
+    }
 
     .right-section {
         position: relative;
@@ -279,7 +286,6 @@ body {
         height: 40vh;
         order: 1;
     }
-}
 
     .support {
         order: 3;  /* Changed from 4 to 3 */
