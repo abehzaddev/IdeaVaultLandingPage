@@ -32,23 +32,6 @@ body {
     padding: 2rem 0;
 }
 
-/* Add this media query for mobile */
-@media (max-width: 1000px) {
-    body {
-        overflow-y: auto; /* Allow scrolling on mobile */
-    }
-    
-    .container {
-        height: auto; /* Allow container to expand on mobile */
-        min-height: 100vh;
-    }
-    
-    .left-section {
-        height: auto; /* Allow section to expand on mobile */
-        min-height: 100vh;
-    }
-}
-
 .right-section {
     position: fixed;
     right: 2rem;
@@ -185,12 +168,6 @@ body {
     color: #FF7B00;
 }
 
-@media (max-width: 1000px) {
-    .footer-content {
-        justify-content: center;
-    }
-}
-
 .message {
     display: none;
     padding: 1rem;
@@ -234,6 +211,19 @@ body {
 }
 
 @media (max-width: 1000px) {
+    body {
+        overflow-y: auto; /* Allow scrolling on mobile */
+    }
+    
+    .container {
+        height: auto; /* Allow container to expand on mobile */
+        min-height: 100vh;
+    }
+    
+    .left-section {
+        height: auto; /* Allow section to expand on mobile */
+        min-height: 100vh;
+    }
     .mockup-carousel {
         height: 40vh;
     }
@@ -241,10 +231,13 @@ body {
     .phone-mockup {
         height: 40vh;
     }
-}
-
-
-@media (max-width: 1000px) {
+    .product-hunt-embed {
+       
+    }
+    
+    .footer-content .product-hunt-embed {
+        display: none;
+    }
     .container {
         display: flex;
         flex-direction: column;
@@ -267,16 +260,21 @@ body {
         right: auto;
         width: 100%;
         margin-top: 2rem;
-        order: 2;
+        order: 1;  /* Carousel first */
     }
 
     .beta-signup {
+        order: 2;  /* Beta signup second */
+    }
+
+    div[style*="margin: 2rem 0"] {  /* Product Hunt embed */
         order: 3;
+        margin: 5rem 0 1rem 0 !important;  /* Increased top margin, reduced bottom margin */
     }
 
     .footer-content {
         width: 100%;
-        margin-top: 3rem;
+        margin-top: 1rem;  /* Reduced margin-top since embed has bottom margin */
         order: 4;
         position: relative;
         bottom: 0;
@@ -299,3 +297,4 @@ body {
         margin-top: 1.5rem;
     }
 }
+
