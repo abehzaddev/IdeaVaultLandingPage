@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const code = urlParams.get('code');
+    const state = urlParams.get('state');
+    
+    if (code && state) {
+        window.location.href = `ideavault://notion-auth-callback?code=${encodeURIComponent(code)}&state=${encodeURIComponent(state)}`;
+    }
+</script>
